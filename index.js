@@ -37,7 +37,7 @@ bot.on("message", async message => {
   });
 
 bot.on('guildMemberAdd', (guildMember) => {
-  guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
+  guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Manager"));
 
   let welcomeChannel = guildMember.guild.channels.get("571606167739170826").then(async msg => {
     
