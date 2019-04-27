@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 
   let reason = args.join(" ").slice(22);
   if(!reason)
-    return message.channel.send("Please Specify a proper reason!);
+    return message.channel.send("Usage: !warn [Player] [Reason]");
   let warnEmbed = new Discord.RichEmbed()
   .setTitle("**NEW WARNING**")
   .setColor("#ff0000")
