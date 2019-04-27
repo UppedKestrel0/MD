@@ -46,7 +46,7 @@ bot.on('guildMemberAdd', (guildMember) => {
 bot.on('ready', async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.size} server/s!`)
 
-    bot.user.setActivity("Upped's Hangout Server | !help for a list of commands", {type: "PLAYING"});
+    bot.user.setActivity("Minecraft Dialations | !help for a list of commands", {type: "PLAYING"});
 });
 
 bot.on('error', error => { console.log(error) });
