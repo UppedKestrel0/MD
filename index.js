@@ -37,13 +37,13 @@ bot.on("message", async message => {
   });
 
 bot.on('guildMemberAdd', (guildMember) => {
-  guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Manager"));
+  guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
 
   let welcomeChannel = guildMember.guild.channels.get("571606167739170826").then(async msg => {
     
     let icon = guildMember.displayAvatarURL
     let welcomeEmbed = new Discord.RichEmbed()
-    .setTitle("**NEW MEMBER**)
+    .setTitle("**NEW MEMBER**")
     .setColor("#008906")
     .setThumbnail(icon)
     .addField("Member", `<@${guildMember.author.id}>`);
