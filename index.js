@@ -39,7 +39,7 @@ bot.on("message", async message => {
 bot.on('guildMemberAdd', (guildMember) => {
   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
 
-  guildMember.guild.channels.get("528370309531697173").send(`Welcome <@${guildMember.id}>`);
+  guildMember.guild.channels.get("571606167739170826").send(`Welcome <@${guildMember.id}>`);
 });
 
 //EVENTS
