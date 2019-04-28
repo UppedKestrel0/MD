@@ -37,20 +37,9 @@ bot.on("message", async message => {
   });
 
 bot.on('guildMemberAdd', (guildMember) => {
-  guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Manager"));
-
-  let welcomeChannel = guildMember.guild.channels.get("571606167739170826").then(async msg => {
-    
-    let icon = guildMember.displayAvatarURL
-    let welcomeEmbed = new Discord.RichEmbed()
-    .setTitle("**NEW MEMBER**")
-    .setColor("#008906")
-    .setThumbnail(icon)
-    .addField("Member", `<@${guildMember.author.id}>`);
-    
-    await welcomeChannel.send(welcomeEmbed);
-    
-  }
+  guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
+  
+  guildMember.guild.channels.get("571606167739170826").send(`Welcome <@${guildMember.id}>`)
 });
 
 //EVENTS
